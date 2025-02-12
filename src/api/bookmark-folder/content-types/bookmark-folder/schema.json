@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookmark_folders",
+  "info": {
+    "singularName": "bookmark-folder",
+    "pluralName": "bookmark-folders",
+    "displayName": "BookmarkFolder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "bookmarks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bookmark.bookmark",
+      "mappedBy": "bookmark_folder"
+    },
+    "user": {
+      "type": "string"
+    }
+  }
+}
